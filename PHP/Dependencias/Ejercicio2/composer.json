@@ -1,0 +1,13 @@
+{
+    "name": "rafa/ejercicio-2",
+    "description": "ej",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ejercicio2\\": "src/"
+        }
+    }
+}

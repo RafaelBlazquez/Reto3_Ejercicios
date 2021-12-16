@@ -1,0 +1,13 @@
+{
+    "name": "rafa/ejercicio-1",
+    "description": "ej",
+    "type": "project",
+    "require": {
+        "phpunit/php-timer": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rafa\\Ejercicio1\\": "src/"
+        }
+    }
+}
