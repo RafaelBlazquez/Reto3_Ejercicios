@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+}
+.header, .footer {
+	background-color: greenyellow;
+}
+.numeros{
+    background-color: lightskyblue;
+  
+}
+.letras{
+    background-color: gray;
+}
+.dispositivo{
+    background-color: cyan;
+}
+.cara{
+    background-color: salmon;
+}
