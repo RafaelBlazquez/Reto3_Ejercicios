@@ -36,6 +36,7 @@ class Persona{
         }
         else
             return false;
+        //return this.edad >=18;
     }
     public comprobarSexo():string{
         if (this.sexo != "H" && this.sexo != "M"){

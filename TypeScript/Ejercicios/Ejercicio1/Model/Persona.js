@@ -28,6 +28,7 @@ var Persona = /** @class */ (function () {
         }
         else
             return false;
+        //return this.edad >=18;
     };
     Persona.prototype.comprobarSexo = function () {
         if (this.sexo != "H" && this.sexo != "M") {
