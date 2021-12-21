@@ -1,0 +1,13 @@
+{
+    "name": "rafa/blade-ej-3",
+    "description": "blade-ej-3",
+    "type": "proyect",
+    "require": {
+        "duncan3dc/blade": "^4.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "BladeEj3\\": "src/"
+        }
+    }
+}

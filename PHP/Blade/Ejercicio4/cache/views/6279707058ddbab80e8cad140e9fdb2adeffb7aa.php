@@ -1,0 +1,1 @@
+<h4>Listado de zapatillas de la tienda <?php echo e($nombre); ?>:</h4><?php /**PATH /vagrant/Blade/Ejercicio4/views/sub-vista.blade.php ENDPATH**/ ?>

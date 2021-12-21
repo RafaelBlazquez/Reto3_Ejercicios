@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php echo $__env->make('sub-vista', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>   
+    <table>
+        <tr>
+            <td>Marca</td>
+            <td>Modelo</td>
+            <td>Tipo</td>
+            <td>Precio</td>    
+        </tr>
+       <?php $__currentLoopData = $zapatillas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $zapatilla): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <tr>
+            <td><?php echo e($zapatilla->getMarca()); ?></td>
+            <td><?php echo e($zapatilla->getModelo()); ?></td>
+            <td><?php echo e($zapatilla->getTipo()); ?></td>
+            <td><?php echo e($zapatilla->getPrecio()); ?></td>
+        </tr>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        
+      
+    </table>
+</body>
+<?php /**PATH /vagrant/Blade/Ejercicio4/views/zapatillas.blade.php ENDPATH**/ ?>

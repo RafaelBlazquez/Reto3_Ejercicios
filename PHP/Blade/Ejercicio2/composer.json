@@ -1,0 +1,12 @@
+{
+    "name": "rafa/blade-ejercicio2",
+    "type": "project",
+    "require": {
+        "duncan3dc/blade": "^4.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "BladeEjercicio2\\": "src/"
+        }
+    }
+}

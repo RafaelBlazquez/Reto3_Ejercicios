@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><?php echo e($nombre); ?> </h1>
+    <h1><?php echo e($mensaje); ?><?php echo e($nombre); ?> </h1>
 </body>
 </html>
 
