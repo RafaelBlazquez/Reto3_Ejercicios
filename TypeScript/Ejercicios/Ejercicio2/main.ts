@@ -15,6 +15,7 @@ $(document).ready(function(){
 function generarDatos(){
     generarLectores();
     generarAutores();
+    generarLibros();
     
 }
 function generarLectores(){
@@ -23,7 +24,7 @@ function generarLectores(){
     lectores.push(lector1);
     let lector2 : Lector = new Lector("2","Jaime","667667667","Narnia");
     lectores.push(lector2);
-    let lector3 : Lector = new Lector("3","Jordi","668668668","LazyTown");
+    let lector3 : Lector = new Lector("3","Jordi","668668668","Atlantida");
     lectores.push(lector3);
 }
 
@@ -31,8 +32,11 @@ function generarAutores(){
     var autores : Autor[] = [];
     let autor1 : Autor = new Autor("J.K.Rowling","Britanica",new Date(31/7/1965));
     autores.push(autor1);
-    let autor2 : Autor = new Autor("C.S.Lewis","Britanica",new Date(31/7/1965));
+    let autor2 : Autor = new Autor("C.S.Lewis","Irlandés",new Date(29/11/1898));
     autores.push(autor2);
-    let autor3 : Autor = new Autor("C.S.Lewis","Britanica",new Date(31/7/1965));
+    let autor3 : Autor = new Autor("John Lenon","Epañol",new Date(26/2/1932));
     autores.push(autor3);
+}
+function generarLibros(){
+    
 }
