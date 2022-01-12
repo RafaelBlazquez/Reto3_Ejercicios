@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="e">
+<head>
+<meta charset="UTF -8">
+<title>Ejercicio2 </title>
+
+<script>
+    let numero=0;
+
+    class Contador extends HTMLElement {
+        constructor() {
+            super();
+        }
+        connectedCallback() {
+            this.innerHTML = '<div><button onclick="sumar()">+</button><input id="valor" type="text"><button onclick="restar()">-</button></div>';
+        }
+    }
+
+    function sumar(){
+        numero+=1;
+        actualizar();
+    }
+    function restar(){
+        numero-=1;
+        actualizar();
+    }
+    function actualizar(){
+        document.getElementById("valor").value=numero;
+    }
+
+    window.customElements.define('contador-numeros', Contador );
+
+</script>
+
+</head>
+<body>
+    <contador-numeros id="contador"></contador-numeros>
+    <script>
+       actualizar();
+    </script>
+        
+</body>
+</html>
