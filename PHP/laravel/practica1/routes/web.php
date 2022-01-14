@@ -23,5 +23,5 @@ Route::post('/', [ArticulosController::class, 'store'])->name('articulos.store')
 
 Route::get('/{titulo}', [ArticulosController::class, 'show'])->name('articulos.show');
 
-Route::get('/remove/{titulo}', [ArticulosController::class, 'delete'])->name('articulos.delete');
+Route::delete('/delete/{titulo}', [ArticulosController::class, 'delete'])->name('articulos.delete');
 

@@ -1,14 +1,17 @@
 
-export default class TextoSaludo extends HTMLElement {
+
+class TextoSaludo extends HTMLElement {
     constructor() {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<div> <p onclick="saludar()">Hola Mundo</p> </div>';
+        this.innerHTML = '<div> <p>Hola Mundo</p> </div>';
+        this.addEventListener('click',this.saludar)
+    }
+    saludar(){
+        alert("Hola Mundo");
     }
 }
 
-function saludar(){
-    alert("Hola Mundo");
-}
+
 customElements.define('texto-saludo', TextoSaludo );

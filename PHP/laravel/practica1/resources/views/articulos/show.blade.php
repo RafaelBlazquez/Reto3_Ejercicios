@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,11 @@
 <body>
     {{$articulo}}
     <br>
+    <form action="{{ route('articulos.delete',$articulo->id )}}" method="POST">
+        @csrf
+        @method("delete")
+        <input value="Borrar" type="submit">
+    </form>
     <a href="{{ route('articulos.index') }}">Atrás</a>
 
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,6 @@
     <br>
     <br>
     <br>
-    <a href="{{ route('articulos.store') }}">Añadir producto</a>
+    <a href="{{ route('articulos.create') }}">Añadir producto</a>
 </body>
 </html>

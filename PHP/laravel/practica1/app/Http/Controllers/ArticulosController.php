@@ -6,6 +6,7 @@ use App\Models\Articulo;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\Cast\Array_;
 use Redirect;
+use SebastianBergmann\Environment\Console;
 
 class ArticulosController extends Controller
 {
@@ -50,6 +51,11 @@ class ArticulosController extends Controller
         $articulo-> contenido = $request->get('contenido');
         $articulo->save();
        
+        return redirect( route('articulos.index') ); 
+    }
+    public function delete($id)
+    {   
+        $articulo = Articulo::destroy($id);
         return redirect( route('articulos.index') ); 
     }
 
