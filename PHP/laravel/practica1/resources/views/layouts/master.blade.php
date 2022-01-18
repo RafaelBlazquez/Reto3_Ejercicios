@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+    <h1>@yield('titulo')</h1>
+
+    @yield('contenido')
+
+    @yield('anadir')
+
+    @yield('volver')
+   </body>
 </html>
+
+
+

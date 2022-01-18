@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    @foreach ($nombres as $nombre)
+@extends('layouts.master')
+
+@section('titulo', 'Revistapp')
+
+@section('contenido')
+
+    @foreach ($articulos as $articulo)
         <ul>
             <li>
-                <a href="{{ route('articulos.show', $nombre) }}">{{$nombre}}</a>
+                <a href="{{ route('articulos.show', $articulo->id) }}">{{$articulo->titulo}}</a>
             </li>
         </ul>
     @endforeach
+@endsection
 
-    <br>
-    <br>
-    <br>
+@section('anadir')
+
     <a href="{{ route('articulos.create') }}">Añadir producto</a>
-</body>
-</html>
+
+@endsection
+
+ 

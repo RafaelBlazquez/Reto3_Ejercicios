@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form method="post" action="{{ route('articulos.store') }}">
+@extends('layouts.master')
+
+@section('titulo', 'Revistapp')
+
+@section('contenido')
+<form method="post" action="{{ route('articulos.store') }}">
         @csrf
         <input name="titulo" id="titulo" type="text">
         <input name="contenido" id="contenido" type="text">
         <input value="Crear" type="submit">
     </form>
-</body>
-</html>
+@endsection

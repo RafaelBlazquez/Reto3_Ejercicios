@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\ComentarioController;
 use App\Models\Articulo;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ArticulosController::class, 'index'])->name('articulos.index');
 
-Route::get('/create', [ArticulosController::class, 'create'])->name('articulos.create');
+Route::get('/', [ArticuloController::class, 'index'])->name('articulos.index');
 
-Route::post('/', [ArticulosController::class, 'store'])->name('articulos.store');
+Route::get('articulos/', [ArticuloController::class, 'index'])->name('articulos.index');
 
-Route::get('/{titulo}', [ArticulosController::class, 'show'])->name('articulos.show');
+Route::get('articulos/create', [ArticuloController::class, 'create'])->name('articulos.create');
 
-Route::delete('/delete/{titulo}', [ArticulosController::class, 'delete'])->name('articulos.delete');
+Route::get('articulos/{id}/comentarios/create', [ComentarioController::class, 'create'])->name('comentarios.create');
+
+Route::post('articulos/', [ArticuloController::class, 'store'])->name('articulos.store');
+
+Route::post('articulos/{id}', [ComentarioController::class, 'store'])->name('comentarios.store');
+
+Route::get('articulos/{id}', [ArticuloController::class, 'show'])->name('articulos.show');
+
+Route::delete('articulos/delete/{titulo}', [ArticuloController::class, 'delete'])->name('articulos.delete');
 

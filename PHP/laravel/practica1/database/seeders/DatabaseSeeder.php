@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $faker = \Faker\Factory::create();
+
+        for($i=0;$i<10;$i++){
+            DB::table('articulos')->insert([
+                'titulo' => $faker->text(50),
+                'contenido' => $faker->text(255)
+            ]);
+        }
+
+        for($i=0;$i<5;$i++){
+            DB::table('comentarios')->insert([
+                'articulo_id' => 3,
+                'comment' => $faker->text(255)
+            ]);
+        }
     }
 }
