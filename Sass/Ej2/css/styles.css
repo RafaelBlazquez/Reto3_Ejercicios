@@ -1,0 +1,34 @@
+.btn {
+  padding: 0.5em;
+  border-radius: 0.4rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:active {
+  background-color: #f87d2b;
+  color: #fff;
+}
+
+.btn:hover {
+  -webkit-box-shadow: calc($Radio/2) calc($Radio/2) #888;
+          box-shadow: calc($Radio/2) calc($Radio/2) #888;
+}
+
+.btn-error {
+  background-color: #ff0000;
+}
+
+.btn-warning {
+  background-color: #eff178;
+}
+
+.btn-accepted {
+  background-color: #378a00;
+}
+
+.btn-normal {
+  background-color: #006eff;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,49 @@
+
+$BotonesDeColores : (
+Rojo : #ff0000,
+Amarillo : rgb(239,241,120),
+Verde : rgb(55,138,0),
+Azul : rgb(0,110,255)
+);
+
+$Radio : 0.4rem;
+$ColorSombra : #888;
+$Naranja : rgb(248, 125, 43);
+$Blanco: #fff;
+
+$GrisClaro : #cccccc;
+$GrisOscuro : #888888;
+
+$botones: (
+  error : Rojo,
+  warning : Amarillo,
+  accepted : Verde,
+  normal : Azul
+);
+
+.btn{
+    padding: 0.5em;
+    border-radius: $Radio;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    &:active{
+        background-color: $Naranja;
+        color: $Blanco;
+    }
+    &:hover{
+        box-shadow: calc($Radio/2) calc($Radio/2) $ColorSombra;
+    }
+}
+
+
+@each $u,$v in $botones{
+
+    .btn-#{$u}{
+        background-color : map-get($map: $BotonesDeColores, $key: $v);
+    }
+}
+
+table{
+    border-collapse: collapse ;
+}

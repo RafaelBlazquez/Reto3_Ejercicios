@@ -1,0 +1,52 @@
+$Blanco: #fff;
+$GrisOscuro:#333;
+$Morado: rgb(155,111,145);
+$AnchoPrincipal:80%;
+
+$Borde: 0.1rem solid $GrisOscuro;
+$tamaños:(pequeño:0.2rem ,normal:1rem, grande:2rem);
+
+.container{
+    width: $AnchoPrincipal;
+    margin:0 auto;
+
+}
+nav{
+    background-color: $Morado;
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            padding: 10px;
+            
+            list-style-type: none;
+            &.active{
+                color: $Blanco;
+            }
+            &:hover{
+                color: $Blanco;
+            }
+            a{
+                color: inherit;
+            }
+        }
+    }
+}
+
+
+
+.card{
+    width: 25%;
+    border: $Borde;
+    border-radius: map-get($map: $tamaños, $key: normal);
+    display: inline-block;
+    padding: 10px;
+    img{
+        border-radius:map-get($map: $tamaños, $key: grande);
+        width: 100%;
+    }
+    figcaption{
+        text-align: center;
+    }
+    
+}  
