@@ -1,19 +1,17 @@
+@use "math";
 .btn {
   padding: 0.5em;
   border-radius: 0.4rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  -webkit-box-shadow: div(0.2rem) 2px #888;
+          box-shadow: div(0.2rem) 2px #888;
 }
 
 .btn:active {
   background-color: #f87d2b;
   color: #fff;
-}
-
-.btn:hover {
-  -webkit-box-shadow: calc($Radio/2) calc($Radio/2) #888;
-          box-shadow: calc($Radio/2) calc($Radio/2) #888;
 }
 
 .btn-error {
@@ -30,5 +28,9 @@
 
 .btn-normal {
   background-color: #006eff;
+}
+
+table {
+  border-collapse: collapse;
 }
 /*# sourceMappingURL=styles.css.map */

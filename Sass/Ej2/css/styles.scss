@@ -1,4 +1,4 @@
-
+@use "math";
 $BotonesDeColores : (
 Rojo : #ff0000,
 Amarillo : rgb(239,241,120),
@@ -27,13 +27,12 @@ $botones: (
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    box-shadow: div($Radio/2) 2px $ColorSombra;
     &:active{
         background-color: $Naranja;
         color: $Blanco;
     }
-    &:hover{
-        box-shadow: calc($Radio/2) calc($Radio/2) $ColorSombra;
-    }
+  
 }
 
 
